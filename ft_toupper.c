@@ -6,11 +6,13 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 18:18:59 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/09/21 18:31:05 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/09/24 16:28:59 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	toupper(int c)
+#include "libft.h"
+
+int	ft_toupper(int c)
 {
 	if (c > 96 && c < 123)
 		c -= 32;

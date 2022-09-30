@@ -6,11 +6,11 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 15:55:12 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/09/18 16:20:44 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/09/24 16:49:33 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

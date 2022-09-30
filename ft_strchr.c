@@ -6,20 +6,24 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:21:58 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/09/21 19:28:49 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/09/24 16:50:32 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *strchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strchr(const char *s, int c)
 {
 	int i;
+	int s_len;
 
 	i = 0;
-	while (s[i] != '\0')
+	s_len = ft_strlen(s);
+	while (i <= s_len)
 	{
 		if (s[i] == c)
-			return (&s[i]);
+			return ((char *)&s[i]);
 		i++;
 	}
-	return('\0');
+	return(NULL);
 }

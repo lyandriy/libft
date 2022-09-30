@@ -6,11 +6,11 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 16:05:13 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/09/18 16:21:05 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/09/24 17:08:49 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 void	*ft_bzero(void *s, size_t n)
 {
