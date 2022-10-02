@@ -6,13 +6,13 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 20:04:18 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/09/30 21:05:15 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/02 13:06:05 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_cpy(char *dst, const char *src, int n)
+static char	*ft_cpy(char *dst, const char *src, int n)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ char	*ft_cpy(char *dst, const char *src, int n)
 	return (dst);
 }
 
-int	ft_count(const char *s, char c)
+static int	ft_count(const char *s, char c)
 {
 	int	i;
 
@@ -38,29 +38,18 @@ int	ft_count(const char *s, char c)
 	return (i);
 }
 
-int	ft_neverita(char const *s, char c)
+static void	ft_free(char **ptr, int j)
 {
-	int	i;
-	int	count;
-	int	k;
-
-	i = 0;
-	k = 0;
-	while (s[i] != '\0')
+	while ( j > -1)
 	{
-		if (s[i] == c)
-			i++;
-		if (s[i] != c && s[i] != '\0')
-		{
-			count = ft_count(&s[i], c);
-			i = i + count + 1;
-			k++;
-		}
+		free(ptr[j]);
+		j--;
 	}
-	return (k);
+	free(ptr);
+	// return (NULL);
 }
 
-char	**ft_nose_tam(char **ptr, const char *s, char c)
+static char	**ft_split_0(char **ptr, const char *s, char c)
 {
 	int	i;
 	int	j;
@@ -76,8 +65,11 @@ char	**ft_nose_tam(char **ptr, const char *s, char c)
 		{
 			count = ft_count(&s[i], c);
 			ptr[j] = malloc (count + 1 * sizeof (char));
-			if (!ptr)
+			if (!ptr[j])
+			{
+				ft_free(ptr, j);
 				return (NULL);
+			}
 			ptr[j] = ft_cpy(ptr[j], &s[i], count);
 			i = i + count + 1;
 			j++;
@@ -90,12 +82,46 @@ char	**ft_nose_tam(char **ptr, const char *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**ptr;
+	int		i;
+	int		count;
+	int		k;
 
+	i = 0;
+	k = 0;
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+			i++;
+		if (s[i] != c && s[i] != '\0')
+		{
+			count = ft_count(&s[i], c);
+			i = i + count + 1;
+			k++;
+		}
+	}
 	if (!s)
 		return (NULL);
-	ptr = (char **) malloc((ft_neverita (s, c) + 1) * sizeof (char *));
+	ptr = (char **) malloc((k + 1) * sizeof (char *));
 	if (!ptr)
 		return (NULL);
-	ft_nose_tam(ptr, s, c);
+	ft_split_0(ptr, s, c);
 	return (ptr);
+}
+
+int main ()
+{
+	char prueba[] = "Hello!";
+	char sep = ' ';
+	char **bonito;
+	int i = 0;
+
+
+	bonito = ft_split(prueba, sep);
+	while (bonito[i])
+	{
+		printf("%s\n", bonito[i]);
+		i++;
+	}
+		printf("%s\n", bonito[i]);
+	return (0);
 }

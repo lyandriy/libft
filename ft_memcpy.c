@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 16:06:49 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/09/23 17:45:09 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/01 16:11:28 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,34 +28,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
-
-/*void	*ft_memcpy(void *dst, const void *src, size_t n)
-{
-	char			*d;
-	const char		*s;
-
-	d = dst;
-	s = src;
-	if (dst == '\0' && src == '\0')
-		return (NULL);
-	while (n > 0)
-	{
-		*d = *s;
-		d++;
-		s++;
-		n--;
-	}
-	return (dst);
-}*/
-
-/*
-int	main(void)
-{
-	char src[] = "abcdef";
-	char dst[] = "123456789";
-
-	printf("Before memcpy dest = %s, src = %s\n", dst, src);
-	ft_memcpy(dst, src, 3);
-	printf("After memcpy dest = %s, src = %s\n", dst, src);
-}
-*/

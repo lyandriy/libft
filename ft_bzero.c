@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 16:05:13 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/09/24 17:08:49 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/01 16:18:10 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,3 @@ void	*ft_bzero(void *s, size_t n)
 	}
 	return (a);
 }
-
-/*
-int main(void)
-{
-	char a[] = "hola mundo";
-	ft_bzero(a, 4);
-	write(1, a, 10);
-	//printf("%s", a);
-}
-*/

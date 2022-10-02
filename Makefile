@@ -6,7 +6,7 @@
 #    By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/18 16:28:08 by lyandriy          #+#    #+#              #
-#    Updated: 2022/09/30 18:17:43 by lyandriy         ###   ########.fr        #
+#    Updated: 2022/10/02 12:12:49 by lyandriy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,8 +52,6 @@ NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra
 
-.PHONY: all, clean, fclean, re
-
 all: $(NAME)
 
 $(NAME) : $(OBJ)
@@ -66,3 +64,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all, clean, fclean, re

@@ -6,26 +6,27 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 20:01:41 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/09/27 17:52:43 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/01 16:46:58 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_cero(void)
+static char	*ft_cero(void)
 {
 	int		i;
 	char	*ptr;
-	
+
 	i = 2;
-	if (!(ptr = malloc (i * sizeof (char))))
+	ptr = malloc (i * sizeof (char));
+	if (!ptr)
 		return (NULL);
 	ptr[0] = '0';
 	ptr[1] = '\0';
 	return (ptr);
 }
 
-int	ft_tam(int *neg, long int j)
+static int	ft_tam(int *neg, long int j)
 {
 	int	i;
 
@@ -57,7 +58,8 @@ char	*ft_itoa(int n)
 	if (n == 0)
 		return (ft_cero());
 	i = ft_tam(&neg, j);
-	if (!(ptr = malloc (i + 1 * sizeof (char))))
+	ptr = malloc (i + 1 * sizeof (char));
+	if (!ptr)
 		return (NULL);
 	if (neg < 0)
 		ptr[0] = '-';

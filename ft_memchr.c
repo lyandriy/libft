@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:37:19 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/09/23 19:58:01 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/01 20:09:20 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t i;
-	char *s_cpy;
+	size_t	i;
+	unsigned char	*s_cpy;
 
 	i = 0;
-	s_cpy = (char *) s;
+	s_cpy = (unsigned char *) s;
 	while (i != n)
 	{
-		if (s_cpy[i] == c)
+		if (s_cpy[i] == (unsigned char) c)
 			return ((unsigned char *) &s_cpy[i]);
 		i++;
 	}

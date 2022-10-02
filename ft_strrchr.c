@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:29:47 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/09/24 16:51:06 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/01 20:14:09 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	int j;
-	char *i;
+	int		j;
+	char	*i;
 
 	i = (char *)s;
 	j = ft_strlen(s);
 	while (j >= 0)
 	{
-		if (i[j] == c)
-			return(&i[j]);
+		if (i[j] == (unsigned char) c)
+			return (&i[j]);
 		j--;
 	}
-	return(NULL);
+	return (NULL);
 }

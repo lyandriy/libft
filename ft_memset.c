@@ -6,11 +6,11 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 16:04:04 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/09/18 16:21:00 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/01 16:21:04 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
@@ -26,12 +26,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (a);
 }
-
-/*
-int main(void)
-{
-	char a[] = "hola mundo";
-	ft_memset(a, 'l', 4);
-	printf("%s", a);
-}
-*/

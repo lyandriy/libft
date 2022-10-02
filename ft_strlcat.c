@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:26:04 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/09/30 15:56:44 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/01 16:22:28 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t c_d;
-	size_t c_s;
-	size_t k;
+	size_t	c_d;
+	size_t	c_s;
+	size_t	k;
 
 	if (!dst && !dstsize)
 		return ((size_t) NULL);
