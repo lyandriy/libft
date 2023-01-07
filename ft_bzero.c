@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 16:05:13 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/10/01 16:18:10 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/02 16:30:10 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_bzero(void *s, size_t n)
 	char	*a;
 
 	i = 0;
-	a = s;
+	a = (char *)s;
 	while (i < n)
 	{
 		a[i] = '\0';

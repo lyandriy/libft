@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 16:04:04 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/10/01 16:21:04 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/02 16:20:38 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memset(void *b, int c, size_t len)
 	char	*a;
 
 	i = 0;
-	a = b;
+	a = (char *)b;
 	while (i != len)
 	{
 		a[i] = (unsigned char)c;

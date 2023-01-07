@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 20:01:41 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/10/01 16:46:58 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/02 14:53:40 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*ft_itoa(int n)
 	if (n == 0)
 		return (ft_cero());
 	i = ft_tam(&neg, j);
-	ptr = malloc (i + 1 * sizeof (char));
+	ptr = malloc ((i + 1) * sizeof (char));
 	if (!ptr)
 		return (NULL);
 	if (neg < 0)

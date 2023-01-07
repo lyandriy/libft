@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 19:37:19 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/10/01 20:09:20 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/02 14:41:40 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	size_t			i;
 	unsigned char	*s_cpy;
 
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 16:02:12 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/09/18 19:44:49 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/02 16:10:00 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ size_t	ft_strlen(const char *s)
 
 	j = 0;
 	while (s[j] != '\0')
-	{
 		j++;
-	}
 	return (j);
 }

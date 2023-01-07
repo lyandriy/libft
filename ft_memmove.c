@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 16:07:59 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/10/01 16:52:15 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/02 15:52:24 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*src_c;
 	char	*dst_c;
 
-	i = 0;
 	src_c = (char *)src;
 	dst_c = (char *)dst;
-	if (src_c == '\0' && dst_c == '\0')
+	if (src_c == 0 && dst_c == 0)
 		return (NULL);
+	i = 0;
 	if (dst_c < src_c)
 	{
 		while (i < len)

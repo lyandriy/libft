@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 20:04:23 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/10/01 16:29:02 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/02 16:00:25 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	char	*ptr;
 
 	i = 0;
-	ptr = malloc (ft_strlen(s1) + 1 * sizeof(char));
+	ptr = malloc ((ft_strlen(s1) + 1) * sizeof(char));
 	if (!ptr || !s1)
 		return (NULL);
 	while (s1[i] != '\0')

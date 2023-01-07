@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 20:04:43 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/10/01 19:24:40 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/02 14:40:33 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t	i;
 	size_t	j;
-	
+
 	i = 0;
 	if (needle[0] == '\0')
 		return ((char *) haystack);

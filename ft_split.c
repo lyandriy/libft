@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 20:04:18 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/10/02 13:06:05 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/02 14:41:23 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static char	*ft_cpy(char *dst, const char *src, int n)
 	int	i;
 
 	i = 0;
-	if (src == '\0' && dst == '\0')
+	if (src == 0 || dst == 0)
 		return (0);
 	while (i < n)
 	{
@@ -38,15 +38,20 @@ static int	ft_count(const char *s, char c)
 	return (i);
 }
 
-static void	ft_free(char **ptr, int j)
+static void	**ft_free(char **ptr, int j)
 {
-	while ( j > -1)
+	if (j == 0)
+	{
+		free(ptr);
+		return (NULL);
+	}
+	while (j > -1)
 	{
 		free(ptr[j]);
 		j--;
 	}
 	free(ptr);
-	// return (NULL);
+	return (NULL);
 }
 
 static char	**ft_split_0(char **ptr, const char *s, char c)
@@ -64,14 +69,11 @@ static char	**ft_split_0(char **ptr, const char *s, char c)
 		if (s[i] != c && s[i] != '\0')
 		{
 			count = ft_count(&s[i], c);
-			ptr[j] = malloc (count + 1 * sizeof (char));
+			ptr[j] = malloc ((count + 1) * sizeof (char));
 			if (!ptr[j])
-			{
-				ft_free(ptr, j);
-				return (NULL);
-			}
+				return ((char **)ft_free(ptr, j - 1));
 			ptr[j] = ft_cpy(ptr[j], &s[i], count);
-			i = i + count + 1;
+			i = i + count;
 			j++;
 		}
 	}
@@ -88,6 +90,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	k = 0;
+	if (!s)
+		return (NULL);
 	while (s[i] != '\0')
 	{
 		if (s[i] == c)
@@ -95,33 +99,13 @@ char	**ft_split(char const *s, char c)
 		if (s[i] != c && s[i] != '\0')
 		{
 			count = ft_count(&s[i], c);
-			i = i + count + 1;
+			i = i + count;
 			k++;
 		}
 	}
-	if (!s)
-		return (NULL);
 	ptr = (char **) malloc((k + 1) * sizeof (char *));
 	if (!ptr)
 		return (NULL);
 	ft_split_0(ptr, s, c);
 	return (ptr);
-}
-
-int main ()
-{
-	char prueba[] = "Hello!";
-	char sep = ' ';
-	char **bonito;
-	int i = 0;
-
-
-	bonito = ft_split(prueba, sep);
-	while (bonito[i])
-	{
-		printf("%s\n", bonito[i]);
-		i++;
-	}
-		printf("%s\n", bonito[i]);
-	return (0);
 }

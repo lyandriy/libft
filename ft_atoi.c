@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 20:00:45 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/10/01 16:28:10 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/12/22 17:51:10 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,3 +40,4 @@ int	ft_atoi(const char *str)
 	}
 	return (num * neg);
 }
+

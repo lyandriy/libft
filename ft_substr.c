@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 20:04:50 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/10/01 20:41:20 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/02 16:37:21 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	j;
 
 	i = 0;
-	j = ft_strlen(s);
 	if (!s)
 		return (NULL);
+	j = ft_strlen(s);
 	if (start >= j)
 	{
-		ptr  = ft_calloc(1, 1);
+		ptr = ft_calloc(1, 1);
 		if (!ptr)
 			return (NULL);
-		return (ptr);	
+		return (ptr);
 	}
 	if (len > j)
 		len = j - start;
@@ -37,12 +37,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (len == 0)
 		return (ptr);
 	ptr = ft_memcpy(ptr, &s[start], len);
-	/*while (i < len)
-	{
-		ptr[i] = s[start];
-		i++;
-		start++;
-	}
-	ptr[i] = '\0';*/
 	return (ptr);
 }

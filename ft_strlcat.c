@@ -6,7 +6,7 @@
 /*   By: lyandriy <lyandriy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:26:04 by lyandriy          #+#    #+#             */
-/*   Updated: 2022/10/01 16:22:28 by lyandriy         ###   ########.fr       */
+/*   Updated: 2022/10/22 16:07:07 by lyandriy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	k;
 
 	if (!dst && !dstsize)
-		return ((size_t) NULL);
+		return (0);
 	k = 0;
 	c_d = ft_strlen(dst);
 	c_s = ft_strlen(src);
@@ -28,8 +28,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		dst[c_d + k] = src[k];
 		k++;
 	}
-	if (k != 0)
-		dst[c_d + k] = '\0';
+	dst[c_d + k] = '\0';
 	if (dstsize < c_d)
 		return (dstsize + c_s);
 	return (c_d + c_s);
